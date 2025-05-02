@@ -3,10 +3,18 @@ p    {color: white;}
 
 body, html {
     height: 100%;
+    background: linear-gradient(135deg, rgba(94,53,177,0.8) 0%, rgba(126,87,194,0.7) 47%, rgba(142,107,204,0.6) 92%, rgba(156,123,214,0.6) 100%), 
+                url(../img/logotipo-violeta.png) no-repeat center center fixed;
+    background-size: contain;
+    background-position: bottom;
     background-repeat: no-repeat;
-    /*background-image: linear-gradient(135deg, rgba(94,53,177,1) 0%, rgba(126,87,194,1) 47%, rgba(142,107,204,1) 92%, rgba(156,123,214,1) 100%);*/
-    background: url(../img/login-bg.JPG) no-repeat center center fixed;
-    background-size: 100% 100%;
+}
+
+.login-wrapper {
+    backdrop-filter: blur(10px);
+    background: rgba(94, 53, 177, 0.3);
+    padding: 40px;
+    border-radius: 10px;
 }
 
 .card-container.card {
@@ -23,58 +31,39 @@ body, html {
     cursor: default;
 }
 
-/*
- * Card component
- */
 .card {
-    background-color: #F7F7F7;
-    /* just in case there no content*/
-    padding: 20px 25px 30px;
-    margin: 0 auto 25px;
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 380px;
+    margin: auto;
     margin-top: 50px;
-    /* shadows and rounded borders */
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .profile-img-card {
     width: 96px;
     height: 96px;
     margin: 0 auto 10px;
-    display: block;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
     border-radius: 50%;
+    display: block;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /*
  * Form styles
  */
-.profile-name-card {
-    font-size: 16px;
+ .profile-name-card {
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
-    margin: 10px 0 0;
-    min-height: 1em;
-}
-
-.reauth-email {
-    display: block;
-    color: #5e35b1; /* violeta más oscuro */
-    line-height: 2;
     margin-bottom: 10px;
-    font-size: 14px;
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+}
+.reauth-email {
+    font-size: 16px;
+    color: #d1c4e9;
+    line-height: 2.2;
 }
 
 .form-signin #inputEmail,
@@ -84,49 +73,41 @@ body, html {
     font-size: 16px;
 }
 
-.form-signin input[type=email],
-.form-signin input[type=password],
-.form-signin input[type=text],
-.form-signin button {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-    z-index: 1;
-    position: relative;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+.form-signin input {
+    border: 2px solid rgba(126,87,194,0.6);
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.12);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 15px;
+}
+.form-signin input:focus {
+    border-color: #4a148c;
+    box-shadow: 0px 4px 10px rgba(126, 87, 194, 0.6);
 }
 
-.form-signin .form-control:focus {
-    border-color: #7e57c2; /* tono más claro */
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #7e57c2;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #7e57c2;
-}
 
 .btn.btn-signin {
-    background-color: #5e35b1; /* violeta más oscuro */
-    padding: 0px;
-    font-weight: 700;
-    font-size: 14px;
-    height: 36px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    border: none;
-    -o-transition: all 0.218s;
-    -moz-transition: all 0.218s;
-    -webkit-transition: all 0.218s;
-    transition: all 0.218s;
+    background: linear-gradient(to right, #5e35b1, #7e57c2);
+    font-size: 16px;
+    height: 44px;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.btn.btn-signin:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 6px 12px rgba(94, 53, 177, 0.5);
 }
 
 .forgot-password {
-    color: #7e57c2; /* tono más claro */
+    color: #7e57c2;
 }
 
 .forgot-password:hover,
 .forgot-password:active,
 .forgot-password:focus {
-    color: #4a148c; /* tono aún más intenso */
+    color: #4a148c;
 }
