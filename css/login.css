@@ -3,11 +3,11 @@ p    {color: white;}
 
 body, html {
     height: 100%;
-    background: linear-gradient(135deg, rgba(94,53,177,0.8) 0%, rgba(126,87,194,0.7) 47%, rgba(142,107,204,0.6) 92%, rgba(156,123,214,0.6) 100%), 
-                url(../img/logotipo-violeta.png) no-repeat center center fixed;
-    background-size: contain;
-    background-position: bottom;
+    background: #2a1a5e;
+    background-image: url(../img/logotipo-violeta.png);
     background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 50%;
 }
 
 .login-wrapper {
@@ -32,14 +32,14 @@ body, html {
 }
 
 .card {
-    backdrop-filter: blur(15px);
-    padding: 40px;
+    backdrop-filter: blur(20px);
+    padding: 45px;
     border-radius: 15px;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 380px;
+    width: 400px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 160px;
 }
 
 .profile-img-card {
@@ -75,31 +75,30 @@ body, html {
 
 .form-signin input {
     border: 2px solid rgba(126,87,194,0.6);
-    padding: 14px;
-    border-radius: 10px;
+    padding: 16px;
+    border-radius: 12px;
     font-size: 16px;
     background: rgba(255,255,255,0.12);
     color: #ffffff;
     transition: all 0.3s ease-in-out;
-    margin-bottom: 15px;
+    margin-bottom: 18px; /* Más espacio entre ellos */
 }
 .form-signin input:focus {
     border-color: #4a148c;
-    box-shadow: 0px 4px 10px rgba(126, 87, 194, 0.6);
+    box-shadow: 0px 4px 12px rgba(126, 87, 194, 0.6);
 }
-
 
 .btn.btn-signin {
     background: linear-gradient(to right, #5e35b1, #7e57c2);
-    font-size: 16px;
-    height: 44px;
-    border-radius: 8px;
-    margin-top: 20px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 17px;
+    height: 46px;
+    border-radius: 10px;
+    margin-top: 25px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .btn.btn-signin:hover {
-    transform: scale(1.08);
-    box-shadow: 0px 6px 12px rgba(94, 53, 177, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 8px 14px rgba(94, 53, 177, 0.5);
 }
 
 .forgot-password {
